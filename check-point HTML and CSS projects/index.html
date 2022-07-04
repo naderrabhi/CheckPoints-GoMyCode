@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/69ba4f6503.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img/nader.jpg" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+    <body>
+        <!--create navbar-->
+            <header class="header-container">
+                <nav class="nav-container">            
+                        <i class="fa-solid fa-n"></i>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#aboutme">About</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#resume">Resume</a></li>
+                            <li><a href="#contactme">Contact</a></li>
+                            <li><a  class="active" href="#">Download CV</a></li>
+                        </ul>           
+                </nav>
+            </header>
+        <!--create navbar-->
+        <!--create Home page-->
+        <section class="homepage" id="home">
+            <div class="about-nader">
+                <div class="icon">
+                <i style="font-size: 45px ;" class="fa-brands fa-facebook"></i>
+                <i style="font-size: 45px ;" class="fa-brands fa-instagram"></i>
+                <i style="font-size: 45px ;" class="fa-brands fa-linkedin"></i>
+                 </div>
+                <br>
+                <h1>I am Nader Rabhi</h1>
+                <p>i'm a Full-Stack web developer </p>
+                <a href="#aboutme">About ME</a>
+            </div>
+            <div class="image-nader">
+                <img src="./img/nader.png" alt="nader">
+            </div>
+        </section>
+        <!--create Home page-->
+        <!--create About section-->
+        <section id="aboutme">
+            <div class="aboutme">
+                <h1>About ME</h1>
+                <p>Hello, my name is NADER RABHI i am from Tunisia
+                    <br> i am 29 years old and i am a Full-Stack web developer
+                    and i can built a responsive website for you</p>
+            </div>
+        </section>
+        <!--create About section-->
+
+        <!--create Work section-->
+        <section id="work">
+            <h1>My Work</h1>
+            <div>
+                <iframe width="900px" height="500px" src="https://www.youtube.com/embed/oYRda7UtuhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <!--create Work section-->
+
+        <!--create Resume section-->
+        <section id="resume">
+        <div class="resumeskills">
+            <h1>My Skills</h1>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>ES6</li>
+                <li>React JS</li>
+                <li>NodJS</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+        </section>
+        <!--create Resume section-->
+        <!--create contact section-->
+        <section id="contactme">
+            <div>
+                <h1>Contact ME</h1>
+                <form class="cont">
+                    <label for="f_name">First Name : </label>
+                    <input id="f_name" type="text" name="fname" placeholder="your first name" required><br>
+
+                    <label for="L_name">Last Name : </label>
+                    <input id="L_name" type="text" name="lname" placeholder="your last name" required><br>
+
+                    <label for="ema">Email : </label>
+                    <input id="ema" type="email" name="u_email" placeholder="your email" required><br>
+
+                    <label for="place">Country : </label>
+                    <select>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                    </select><br>
+
+                    <label for="msg">Message</label>
+                    <textarea name="msg" id="msg" cols="30" rows="5" placeholder="your message"></textarea>
+                    <div class="btn">
+                    <input type="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!--create contact section-->
+
+        <!--create footer section-->
+    <footer id="footer">
+        <section>
+            <div>
+                <table>
+                    <tr>
+                        <td>Name :</td>
+                        <th>Nader rabhi</th>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <th><a class="foota" href="mailto: ">naderrabhi93@outlook.com</a></th>
+                    </tr>
+                    <tr>
+                        <td>Phone :</td>
+                        <th> <a class="foota" href="tel: ">+21697076800</a></th>
+                    </tr>
+                    <tr>
+                        <td>Linkdin :</td>
+                        <th><a class="foota" href="#">Linkdin</a></th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </footer>
+    <div id="copy">
+        <p>&copy; 2022, All copyrights reserved</p>
+    </div>
+
+        <!--create footer section-->
+    </body>
+</html>
