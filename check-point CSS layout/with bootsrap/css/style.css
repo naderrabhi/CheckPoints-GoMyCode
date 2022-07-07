@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+/* CSS Original */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     font-family: 'Roboto', Arial , sans-serif;
     font-weight: bold;
 }
+/* navbar */
 .navbar {
     height: 60px;
     font-weight:400;
@@ -55,24 +57,30 @@
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+/* icon header one */
 .img-rowcontainer1-main {
     padding-top: 55px;
 }
+/*header one */
 .header-contaner-main {
     padding-top: 55px;
     text-align: center;
     color: #00b39b;
     font-weight: 200;
 }
+/*row-3*/
 .rowcontainer-3 {
     padding-top: 50px;
     color: #747474;
 }
+/*row-4*/
 .rowcontainer-4 {
     padding-top: 50px;
 }
 .colrow4 {
     height: 375px;
+    flex: 0 0 auto;
+    width: 29%;
 }
 .patients , .doctors , .clinics {
     padding: 35px;
@@ -117,21 +125,13 @@
     padding: 2px !important;
     margin: 15px 0;
 }
+/*row-5*/
 .div-rowcontainer-5-main {
     display: inline;
-}
-.colrow4 {
-    flex: 0 0 auto;
-    width: 29%;
 }
 .colrow5 {
     padding: 28px 10px ;
     line-height: 3em;
-}
-#img9 {
-    width: 50px;
-    padding-top: 15px;
-    height: 65px;
 }
 .rowcontainer-5 h1 {
     font-size: 43px;
@@ -147,6 +147,7 @@
     color: #00b39b;
     text-decoration: underline;
 }
+/*container2*/
 .container2 {
 background-color: #e5faf8;
 background-image: linear-gradient(-45deg,rgba(0,204,177,.01) 5%,rgba(61,199,223,.1));
@@ -182,6 +183,10 @@ padding-bottom: 25px;
     padding-top: 25px;
     color: #747474;
 }
+#colcardtrans {
+    transform: translateY(-30px);
+}
+/* container with header and paragraph*/
 .colrow7 h1 {
     color: #00b39b;
     font-size: 35x;
@@ -190,6 +195,7 @@ padding-bottom: 25px;
     color: #747474;
     font-size: 16px;
 }
+/* the 8 cards of places */
 .divcolrow7 {
     display: flex;
     display: inline-flex;
@@ -211,11 +217,9 @@ padding-bottom: 25px;
 .colrow8 h1 {
     color: rgb(65, 64, 64);
 }
+/*footer*/
 .row9 {
     font-size: 14px;
     color: #444343;
     font-weight: bold;
-}
-#colcardtrans {
-    transform: translateY(-30px);
 }
