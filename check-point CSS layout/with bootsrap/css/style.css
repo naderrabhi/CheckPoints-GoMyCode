@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial , sans-serif;
+    font-weight: bold;
+}
+.navbar {
+    height: 60px;
+    font-weight:400;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 2px -1px 7px rgb(0,0,0,0.3);
+}
+.collapse {
+    justify-content: end;
+}
+.nav-item {
+    padding-right: 0.5em;
+}
+.nav-link {
+    color:grey;
+    font-size: 18px;
+}
+.nav-link:hover {
+    color: #00b39b;
+}
+.active {
+    color:#00b39b ;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-item {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown-item:hover {
+    background-color: rgb(245, 245, 245);
+    color:#00b39b ;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.img-rowcontainer1-main {
+    padding-top: 55px;
+}
+.header-contaner-main {
+    padding-top: 55px;
+    text-align: center;
+    color: #00b39b;
+    font-weight: 200;
+}
+.rowcontainer-3 {
+    padding-top: 50px;
+    color: #747474;
+}
+.rowcontainer-4 {
+    padding-top: 50px;
+}
+.colrow4 {
+    height: 375px;
+}
+.patients , .doctors , .clinics {
+    padding: 35px;
+    background-color: #00b39b;
+    color: white;
+    box-shadow: 2px -1px 7px rgb(0,0,0,0.3);
+    border-radius: 5%;
+    height: 375px;
+}
+.patients , .doctors , .clinics i {
+    font-size: 25px;
+}
+.patients > h1 , .doctors > h1 , .clinics > h1 {
+    padding-top: 20px;
+    font-size: 28px;
+}
+.patients > p , .doctors > p , .clinics > p {
+    font-size: 19px;
+    padding-top: 15px;
+}
+.patients > select , .doctors > select , .clinics > select {
+    margin-top: 75px;
+    background-color: #00b39b;
+    border: none;
+    text-decoration: underline;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+.doctors {
+    background-color: #3d83df !important;
+}
+.clinics {
+    background-color: #1b2734 !important;
+}
+.doctors > select {
+    background-color: #3d83df !important;
+    margin: 104px 0;
+}
+.clinics > select {
+    background-color: #1b2734 !important;
+    padding: 2px !important;
+    margin: 15px 0;
+}
+.div-rowcontainer-5-main {
+    display: inline;
+}
+.colrow4 {
+    flex: 0 0 auto;
+    width: 29%;
+}
+.colrow5 {
+    padding: 28px 10px ;
+    line-height: 3em;
+}
+#img9 {
+    width: 50px;
+    padding-top: 15px;
+    height: 65px;
+}
+.rowcontainer-5 h1 {
+    font-size: 43px;
+    color: #00b39b;
+}
+.div-rowcontainer-5-main {
+    padding-right: 20px;
+    padding-right: 41px;
+    font-size: 20px;
+    color: #747474;
+}
+.div-rowcontainer-5-main a:hover {
+    color: #00b39b;
+    text-decoration: underline;
+}
+.container2 {
+background-color: #e5faf8;
+background-image: linear-gradient(-45deg,rgba(0,204,177,.01) 5%,rgba(61,199,223,.1));
+padding: 1px 65px;
+padding-bottom: 25px;
+}
+.colrow6 h1 {
+    color: #00b39b;
+}
+.colrow6 p {
+    color: #747474;
+}
+.cardcontainer2 {
+    width: 250px;
+    height: 320px;
+    font-size: 14px;
+    padding: 0px 7px;
+    border-radius: 3%;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    color: #00b39b;
+}
+.cardcontainer2 i {
+    font-size: 35px;
+}
+.cardcontainer2 h2 {
+    font-size: 25px;
+    padding-top: 25px;
+}
+.cardcontainer2 p {
+    font-size: 17px;
+    padding-top: 25px;
+    color: #747474;
+}
+.colrow7 h1 {
+    color: #00b39b;
+    font-size: 35x;
+}
+.colrow7 p {
+    color: #747474;
+    font-size: 16px;
+}
+.divcolrow7 {
+    display: flex;
+    display: inline-flex;
+    padding-top: 20px;
+    justify-content:space-between;
+    margin: 0 15px;
+}
+.cardcolrow7 {
+    border-radius: 3%;
+}
+.cardcolrow7 h3 {
+    color: #747474;
+}
+.btn-row8 {
+    padding: 10px 10px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.colrow8 h1 {
+    color: rgb(65, 64, 64);
+}
+.row9 {
+    font-size: 14px;
+    color: #444343;
+    font-weight: bold;
+}
+#colcardtrans {
+    transform: translateY(-30px);
+}
