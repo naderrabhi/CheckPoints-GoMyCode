@@ -1,0 +1,52 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+table {
+    width: 80%;
+    height: auto;
+    margin: 5% auto;
+    text-align: center;
+}
+td, th {
+    padding: 16px;
+}
+.title {
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+}
+.mp {
+    font-size: 16px;
+    padding: 2% 4%;
+    border: none;
+    color: white;
+    background: cadetblue;
+    border-radius: 30px;
+}
+#qty1,#qty2,#tot1,#tot2,#tot {
+    width: 45%;
+    background: rgb(51, 51, 51);
+    color: white;
+    text-align: center;
+    border: none;
+}
+.rem, .tot {
+    border: none;
+    color: white;
+    background: cadetblue;
+    padding: 4% 4%;
+    border-radius: 30px;
+}
+#h1, #h2{
+    color: gray;
+    font-size: 35px;
+}
+#h1:hover, #h2:hover {
+    color: red;
+    transform: scale(1.1);
+}
+input:hover {
+    transform: scale(1.1);
+}

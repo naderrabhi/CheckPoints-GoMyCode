@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/69ba4f6503.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <table>
+            <thead>
+                <tr class="title">
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>QTY</th>
+                    <th>remove</th>
+                    <th>total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="card1">
+                    <td><img src="./img/1.jpg" width="200px" height="150px" alt=""></td>
+                    <td>22$</td>
+                    <td>
+                        <input class="mp" type="submit" onclick="moin1()" value="-">
+                        <input id="qty1" type="number" value="1" min="0">
+                        <input class="mp" type="submit" onclick="plus1()" value="+">
+                    </td>
+                    <td><input class="rem" type="submit" onclick="remove1()" value="remove"></td>
+                    <td>
+                        <input class="tot" value="total" type="submit" onclick="tot1()">
+                        <input id="tot1" type="number" value="0">
+                        <label for="tot1">$</label>
+                    </td>
+                    <td><i onclick="background1()" id="h1" class="fa-solid fa-heart"></i></td>
+                </tr>
+                <tr id="card2">
+                    <td><img src="./img/1.jpg" width="200px" height="150px" alt=""></td>
+                    <td>22$</td>
+                    <td>
+                        <input class="mp" type="submit" onclick="moin2()" value="-">
+                        <input id="qty2" type="number" value="1" min="0">
+                        <input class="mp" type="submit" onclick="plus2()" value="+">
+                    </td>
+                    <td><input class="rem" type="submit" onclick="remove2()" value="remove"></td>
+                    <td>
+                        <input class="tot" value="total" type="submit" onclick="tot2()">
+                        <input id="tot2" type="number" value="0">
+                        <label for="tot2">$</label>
+                    </td>
+                    <td><i onclick="background2()" id="h2" class="fa-solid fa-heart"></i></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr id="footer">
+                    <td></td>
+                    <td></td>
+                    <td><p>Price total is </p></td>
+                    <td><input class="tot" value="total Price" type="submit" onclick="tot()"></td>
+                    <td>
+                        <input id="tot" type="number" value="0">
+                        <label for="tot">$</label>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <script src="script.js" ></script>
+</body>
+</html>
