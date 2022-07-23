@@ -1,75 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/69ba4f6503.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <main>
-        <table>
-            <thead>
-                <tr class="title">
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>QTY</th>
-                    <th>remove</th>
-                    <th>total</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="card1">
-                    <td><img src="./img/1.jpg" width="200px" height="150px" alt=""></td>
-                    <td>22$</td>
-                    <td>
-                        <input class="mp" type="submit" onclick="moin1()" value="-">
-                        <input id="qty1" type="number" value="1" min="0">
-                        <input class="mp" type="submit" onclick="plus1()" value="+">
-                    </td>
-                    <td><input class="rem" type="submit" onclick="remove1()" value="remove"></td>
-                    <td>
-                        <input class="tot" value="total" type="submit" onclick="tot1()">
-                        <input id="tot1" type="number" value="0">
-                        <label for="tot1">$</label>
-                    </td>
-                    <td><i onclick="background1()" id="h1" class="fa-solid fa-heart"></i></td>
-                </tr>
-                <tr id="card2">
-                    <td><img src="./img/1.jpg" width="200px" height="150px" alt=""></td>
-                    <td>22$</td>
-                    <td>
-                        <input class="mp" type="submit" onclick="moin2()" value="-">
-                        <input id="qty2" type="number" value="1" min="0">
-                        <input class="mp" type="submit" onclick="plus2()" value="+">
-                    </td>
-                    <td><input class="rem" type="submit" onclick="remove2()" value="remove"></td>
-                    <td>
-                        <input class="tot" value="total" type="submit" onclick="tot2()">
-                        <input id="tot2" type="number" value="0">
-                        <label for="tot2">$</label>
-                    </td>
-                    <td><i onclick="background2()" id="h2" class="fa-solid fa-heart"></i></td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr id="footer">
-                    <td></td>
-                    <td></td>
-                    <td><p>Price total is </p></td>
-                    <td><input class="tot" value="total Price" type="submit" onclick="tot()"></td>
-                    <td>
-                        <input id="tot" type="number" value="0">
-                        <label for="tot">$</label>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-    </main>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="script.js" ></script>
-</body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script src="https://kit.fontawesome.com/69ba4f6503.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+
+    <section>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card">
+              <img class="imageV" src="./img/1.jpg" alt="">
+              <div class="card-title">
+                <h5 class="titleV">Black Vape</h5>
+                <i class="fa-solid fa-heart heart"></i>
+              </div>
+              <div class="card-body">
+                <p class="priceVape">89 dt</p>
+              </div>
+              <div class="card-qte">
+                <input class="minus" type="submit" value="-">
+                <input class="qte" type="number" value="0" min="0">
+                <input class="plus" type="submit" value="+">
+              </div>
+              <div class="total-Price">
+                <p  >Total Price : <span class="totalPrice" >0</span> dt</p>
+              </div>
+              <div class="btn-add">
+                <input class="btnadd" type="submit" value="add to card">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card">
+              <img class="imageV" src="./img/2.jpg" alt="">
+              <div class="card-title">
+                <h5 class="titleV">Silver Vape</h5>
+                <i class="fa-solid fa-heart heart"></i>
+              </div>
+              <div class="card-body">
+                <p class="priceVape">109 dt</p>
+              </div>
+              <div class="card-qte">
+                <input class="minus" type="submit" value="-">
+                <input class="qte" type="number" value="0" min="0">
+                <input class="plus" type="submit" value="+">
+              </div>
+              <div class="total-Price">
+                <p  >Total Price : <span class="totalPrice" >0</span> dt</p>
+              </div>
+              <div class="btn-add">
+                <input class="btnadd" type="submit" value="add to card">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card">
+              <img class="imageV" src="./img/3.jpg" alt="">
+              <div class="card-title">
+                <h5 class="titleV">Red Vape</h5>
+                <i class="fa-solid fa-heart heart"></i>
+              </div>
+              <div class="card-body">
+                <p class="priceVape">99 dt</p>
+              </div>
+              <div class="card-qte">
+                <input class="minus" type="submit" value="-">
+                <input class="qte" type="number" value="0" min="0">
+                <input class="plus" type="submit" value="+">
+              </div>
+              <div class="total-Price">
+                <p  >Total Price : <span class="totalPrice" >0</span> dt</p>
+              </div>
+              <div class="btn-add">
+                <input class="btnadd" type="submit" value="add to card">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card">
+              <img class="imageV" src="./img/4.jpg" alt="">
+              <div class="card-title">
+                <h5 class="titleV">Purple Vape</h5>
+                <i class="fa-solid fa-heart heart"></i>
+              </div>
+              <div class="card-body">
+                <p class="priceVape">122 dt</p>
+              </div>
+              <div class="card-qte">
+                <input class="minus" type="submit" value="-">
+                <input class="qte" type="number" value="0" min="0">
+                <input class="plus" type="submit" value="+">
+              </div>
+              <div class="total-Price">
+                <p  >Total Price : <span class="totalPrice" >0</span> dt</p>
+              </div>
+              <div class="btn-add">
+                <input class="btnadd" type="submit" value="add to card">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5" id="addcard" style="flex-direction: column;">
+
+        </div>
+        <div class="row mt-1">
+          <p class="priceTot">price Total : <span id="price-tot">0</span> dt </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script src="./script.js" ></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
