@@ -1,0 +1,27 @@
+ALGORITH SOMME
+
+VAR
+
+length, word, vowels, i:integer;
+sentence=[]:string;
+
+BEGIN
+
+length := 0;
+word :=0;
+vowel := 0;
+
+FOR ( i:=0; i < sentence.length; i++  ) DO 
+	var ch = sentence.charAt(i)
+		if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") {
+        		vowels := vowels + 1;
+      		}else if (ch == " ") {
+        		word := word + 1;
+      }
+END IF
+		length := i ;
+END FOR
+   Write("The length of the sentence is " + length);
+	Write("The number of words in the sentence " + word);
+		Write("The number of vowels in the sentence." + vowels)
+END
