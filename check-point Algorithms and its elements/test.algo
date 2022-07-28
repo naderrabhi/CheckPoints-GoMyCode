@@ -2,12 +2,17 @@ ALGORITHM algorithm_name
 VAR
     leng, word, vowels, i:integer;
     sentence = [] : string;
+    ch : CHAR ;
 BEGIN
     leng := 0;
     word :=0;
     vowel := 0;
+    i := 0;
 
-    FOR i FROM 0 TO sentence.length STEP 1  DO
+    write ("enter your sentence")
+    read (sentence)
+
+    FOR i FROM 0 TO (sentence.length - 1) STEP 1  DO
         var ch = sentence.charAt(i)
         IF (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") THEN
             vowels := vowels + 1;
@@ -19,6 +24,7 @@ BEGIN
     
     leng := i + 1 ;
 
+    Write("The length of the sentence is " + sentence);
     Write("The length of the sentence is " + leng);
 	Write("The number of words in the sentence " + word);
     Write("The number of vowels in the sentence." + vowels)
