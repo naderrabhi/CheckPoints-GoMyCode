@@ -1,0 +1,27 @@
+ALGORITHM Problem2Solution1
+VAR
+    set1:ARRAY_OF INTEGER [50];
+    set2:ARRAY_OF INTEGER [50];
+    sum,X,i,j :integer;
+BEGIN
+
+    Write("enter you're first Array"); read(set1);
+    Write("enter you're second Array"); read(set2);
+
+        i:=0;
+        j:=0;
+        sum:=0;
+
+        FOR i FROM 0 TO set1.length - 1 STEP 1  DO
+                X := set1[i];
+            WHILE (j < set2.length) DO
+                IF (X <> set2[j]) THEN
+                    j++;
+                ELSE
+                    sum := sum + X * 2;
+                END_IF
+            END_WHILE
+        END_FOR
+
+    Write("Sum of overlapping elements : " + sum);
+END

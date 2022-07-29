@@ -1,0 +1,46 @@
+ALGORITHM Problem1Solution2
+VAR
+    htab : HASH_TABLE<INTEGER,INTEGER>;
+    set1:ARRAY_OF INTEGER [50];
+    set2:ARRAY_OF INTEGER [50];
+    count,i,j :integer;
+BEGIN
+    
+    Write("enter you're first Array"); read(set1);
+    Write("enter you're second Array"); read(set2);
+
+    
+    i := 0 ;
+    j := 0 ;
+        //insert first array in htab
+    FOR i FROM 0 TO set1.length - 1 STEP 1  DO
+        htab.insert( set1[i], 1);
+    END_FOR
+        //lookup second array in htab
+    FOR j FROM 0 TO set2.length - 1 STEP 1  DO
+        IF (htab.lookup(set2[j])) THEN
+            htab.insert(set2[j], 2);
+        ELSE
+            htab.insert(set2[j], 1);
+        END_IF
+    END_FOR
+    //lookup the two array and count the distinct Elements
+    // i:=0;
+    // j:=0;
+    count := 0 ;
+
+    WHILE (i < set1.length && j < set2.length) DO
+        IF (htab.get(set1[i]) == 1) THEN
+            count := count + set1[i];
+        ELSE
+            i++;
+        END_IF
+        IF (htab.get(set2[j]) == 1) THEN
+            count := count + set2[j];
+        ELSE
+            j++;
+        END_IF
+    END_WHILE
+
+    Write("Output Of distinct Elements is " + count);
+END

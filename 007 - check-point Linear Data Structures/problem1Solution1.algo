@@ -1,0 +1,26 @@
+ALGORITHM Problem1Solution1
+VAR
+    set1:ARRAY_OF INTEGER [50];
+    set2:ARRAY_OF INTEGER [50];
+    sum,X,i,j :integer;
+BEGIN
+    
+    Write("enter you're first Array"); read(set1);
+    Write("enter you're second Array"); read(set2);
+
+        i:=0;
+        j:=0;
+        sum:=0;
+
+        FOR i FROM 0 TO set1.length-1 STEP 1  DO
+            X := set1[i]
+            WHILE ( X <> set2 [j] && j < set2.length ) DO
+                j := j + 1;
+            END_WHILE
+            IF (j == set2.length) THEN
+                Sum := Sum + 1;
+            END_IF
+        END_FOR
+
+        Write("Output Of distinct Elements is " + sum);
+END
