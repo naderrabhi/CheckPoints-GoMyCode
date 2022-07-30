@@ -1,0 +1,60 @@
+//by Reference
+PROCEDURE Dot_Prod(VAR Vectors : ARRAY_OF INTEGER[n]; VAR ps : ARRAY_OF INTEGER[])
+VAR
+    i,j : INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-2 STEP 2  DO
+        FOR j FROM 0 TO n-1 STEP 1  DO
+            ps[j] := Vectors[i]*Vectors[i+1]
+        END_FOR
+    END_FOR
+END
+
+FUNCTION Check_Size() : INTEGER
+VAR
+    n : INTEGER ;
+BEGIN
+    REPEAT
+        read(n)
+    UNTIL (n % 2 = 0)
+
+    RETURN n ;
+END
+
+FUNCTION Tab_read(VAR Vectors : ARRAY_OF INTEGER[n]; VAR V : ARRAY_OF INTEGER[2]) : ARRAY_OF INTEGER[n]
+VAR
+    i,j,x : INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM 0 TO 2 STEP 1  DO
+            read(x);
+            V[j]:=x
+        END_FOR
+        Vectors[i]:= V
+    END_FOR
+    RETURN Vectors ;
+END
+
+ALGORITHM Dot_Product
+VAR
+    Vectors : ARRAY_OF INTEGER [];
+    V,ps : ARRAY_OF INTEGER [];
+    i,j,n,x : INTEGER;
+BEGIN
+    Size := Check_Size(n);
+    Tab := Tab_read(Vectors,V); //////
+
+    i:=0;
+
+    FOR i FROM 0 TO ps.length-1 STEP 1  DO
+
+            Dot_Prod(Tab); ///////
+
+        IF (ps[i]==0) THEN
+            Write("the Vectors are orthogonal");
+        ELSE
+            Write("the Vectors are not orthogonal");
+        END_IF
+
+    END_FOR
+END

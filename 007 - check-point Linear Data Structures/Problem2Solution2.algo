@@ -25,22 +25,21 @@ BEGIN
     END_FOR
 
     //lookup the two array and count the distinct Elements
-    // i:=0;
-    // j:=0;
-    count := 0 ;
+        i:=0;
+        j:=0;
+        count := 0 ;
 
-    WHILE (i < set1.length && j < set2.length) DO
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
         IF (htab.get(set1[i]) == 2) THEN
-            count := count + set1[i] * 2;
-        ELSE
-            i++;
+            count := count + set1[i];
         END_IF
+    END_FOR
+
+    FOR j FROM 0 TO set2.length-1 STEP 1  DO
         IF (htab.get(set2[j]) == 2) THEN
-            count := count + set2[j] * 2;
-        ELSE
-            j++;
+            count := count + set2[i];
         END_IF
-    END_WHILE
+    END_FOR
 
     Write("Sum of overlapping elements : " + count);
 END
