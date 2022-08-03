@@ -1,60 +1,31 @@
-//by Reference
-PROCEDURE Dot_Prod(VAR Vectors : ARRAY_OF INTEGER[n]; VAR ps : ARRAY_OF INTEGER[])
-VAR
-    i,j : INTEGER;
+PROCEDURE Dot_Prod(V1,V2 : ARRAY_OF INTEGER[2]; VAR ps:INTEGER)
 BEGIN
-    FOR i FROM 0 TO n-2 STEP 2  DO
-        FOR j FROM 0 TO n-1 STEP 1  DO
-            ps[j] := Vectors[i]*Vectors[i+1]
-        END_FOR
+    FOR i FROM 0 TO 2 STEP 1  DO
+            ps := ps + V1[i] * V2[i]
     END_FOR
-END
-
-FUNCTION Check_Size() : INTEGER
-VAR
-    n : INTEGER ;
-BEGIN
-    REPEAT
-        read(n)
-    UNTIL (n % 2 = 0)
-
-    RETURN n ;
-END
-
-FUNCTION Tab_read(VAR Vectors : ARRAY_OF INTEGER[n]; VAR V : ARRAY_OF INTEGER[2]) : ARRAY_OF INTEGER[n]
-VAR
-    i,j,x : INTEGER;
-BEGIN
-    FOR i FROM 0 TO n-1 STEP 1  DO
-        FOR j FROM 0 TO 2 STEP 1  DO
-            read(x);
-            V[j]:=x
-        END_FOR
-        Vectors[i]:= V
-    END_FOR
-    RETURN Vectors ;
 END
 
 ALGORITHM Dot_Product
 VAR
-    Vectors : ARRAY_OF INTEGER [];
-    V,ps : ARRAY_OF INTEGER [];
-    i,j,n,x : INTEGER;
+    V1 : ARRAY_OF INTEGER [2];
+    V2 : ARRAY_OF INTEGER [2];
+    i,j,n,ps : INTEGER
 BEGIN
-    Size := Check_Size(n);
-    Tab := Tab_read(Vectors,V); //////
+    Write("enter n");read(n);
 
-    i:=0;
+    FOR i FROM 0 TO 2 STEP 1  DO
+        Write("enter vector 1")
+        read(V1[i])
+        Write("enter vector 1")
+        read(V2[i])
+    END_FOR
 
-    FOR i FROM 0 TO ps.length-1 STEP 1  DO
+    Dot_Prod (V1,V2,ps);
 
-            Dot_Prod(Tab); ///////
-
-        IF (ps[i]==0) THEN
-            Write("the Vectors are orthogonal");
+        IF (ps == 0) THEN
+            Write(V1 + "and" + V2 + "are orthogonal");
         ELSE
-            Write("the Vectors are not orthogonal");
+            Write(V1 + "and" + V2 + "are not orthogonal");
         END_IF
 
-    END_FOR
 END

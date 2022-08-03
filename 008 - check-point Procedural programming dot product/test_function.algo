@@ -1,53 +1,8 @@
 
-// check if the n
-//is pair or not
-FUNCTION Check_Size() : INTEGER
-VAR
-    n : INTEGER ;
+FUNCTION Dot_Prod(V1,V2 : ARRAY_OF INTEGER[n];ps:INTEGER) : INTEGER
 BEGIN
-    REPEAT
-        read(n)
-    UNTIL (n % 2 = 0)
-
-    RETURN n ;
-END
-// Read vector inside array V
-// put it in Vectors_Array
-FUNCTION Tab_read(VAR Vectors : ARRAY_OF INTEGER[n]; VAR V : ARRAY_OF INTEGER[2]) : ARRAY_OF INTEGER[n]
-VAR
-    i,j,x : INTEGER;
-BEGIN
-    FOR i FROM 0 TO n-1 STEP 1  DO
-        FOR j FROM 0 TO 2 STEP 1  DO
-            read(x);
-            V[j]:=x
-        END_FOR
-        Vectors[i]:= V
-    END_FOR
-    RETURN Vectors ;
-END
-//By Reference
-FUNCTION Dot_Prod(VAR Vectors : ARRAY_OF INTEGER[n]; VAR ps : ARRAY_OF INTEGER[]) : ARRAY_OF INTEGER[]
-VAR
-    i,j : INTEGER;
-BEGIN
-    FOR i FROM 0 TO n-2 STEP 2  DO
-        FOR j FROM 0 TO n-1 STEP 1  DO
-            ps[j] := Vectors[i]*Vectors[i+1]
-        END_FOR
-    END_FOR
-    RETURN ps ;
-END
-
-//By Value
-FUNCTION Dot_Prod(Vectors : ARRAY_OF INTEGER[n];ps : ARRAY_OF INTEGER[]) : ARRAY_OF INTEGER[]
-VAR
-    i,j : INTEGER;
-BEGIN
-    FOR i FROM 0 TO n-2 STEP 2  DO
-        FOR j FROM 0 TO n-1 STEP 1  DO
-            ps[j] := Vectors[i]*Vectors[i+1]
-        END_FOR
+    FOR i FROM 0 TO 2 STEP 1  DO
+            ps := ps + V1[i] * V2[i]
     END_FOR
     RETURN ps ;
 END
@@ -55,22 +10,25 @@ END
 
 ALGORITHM Dot_Product
 VAR
-    Vectors : ARRAY_OF INTEGER [];
-    V : ARRAY_OF INTEGER [];
-    ps : ARRAY_OF INTEGER [];
-    i,j,n,x : INTEGER
+    V1 : ARRAY_OF INTEGER [2];
+    V2 : ARRAY_OF INTEGER [2];
+    i,j,n,ps : INTEGER
 BEGIN
-    Size := Check_Size(n);
-    Tab := Tab_read(Vectors,V);
-    Dot_P := Dot_Prod(Vectors,V);
+    Write("enter n");read(n);
 
-        i:=0;
-
-    FOR i FROM 0 TO ps.length-1 STEP 1  DO
-        IF (ps[i]==0) THEN
-            Write("the Vectors are orthogonal");
-        ELSE
-            Write("the Vectors are not orthogonal");
-        END_IF
+    FOR i FROM 0 TO 2 STEP 1  DO
+        Write("enter vector 1")
+        read(V1[i])
+        Write("enter vector 1")
+        read(V2[i])
     END_FOR
+
+    Dot_P := Dot_Prod(V1,V2,ps);
+
+        IF (Dot_P == 0) THEN
+            Write(V1 + "and" + V2 + "are orthogonal");
+        ELSE
+            Write(V1 + "and" + V2 + "are not orthogonal");
+        END_IF
+
 END

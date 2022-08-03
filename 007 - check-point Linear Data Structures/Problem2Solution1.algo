@@ -2,7 +2,7 @@ ALGORITHM Problem2Solution1
 VAR
     set1:ARRAY_OF INTEGER [50];
     set2:ARRAY_OF INTEGER [50];
-    sum,X,i,j :integer;
+    sum,i,j :integer;
 BEGIN
 
     Write("enter you're first Array"); read(set1);
@@ -12,13 +12,12 @@ BEGIN
         j:=0;
         sum:=0;
 
-        FOR i FROM 0 TO set1.length - 1 STEP 1  DO
-                X := set1[i];
+        FOR i FROM 0 TO set1.length STEP 1  DO
             WHILE (j < set2.length) DO
-                IF (X <> set2[j]) THEN
+                IF (set1[i] <> set2[j]) THEN
                     j++;
                 ELSE
-                    sum := sum + X * 2;
+                    sum := sum + set1[i] * 2;
                 END_IF
             END_WHILE
         END_FOR
