@@ -1,0 +1,41 @@
+body {
+  background-color: gainsboro;
+  font-family: serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.container {
+  width: 65%;
+  margin: 5% auto;
+}
+.card {
+  background-color: white;
+  padding: 12% 10%;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 0 18px rgb(255, 236, 236);
+}
+.profile-photo h3 {
+    padding-top: 5%;
+    color: orangered;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: serif;
+}
+.profile-photo p {
+    font-size: 24px;
+    color: gray;
+}
+.btn {
+  width: 45%;
+  margin: 2%;
+  padding: 3%;
+}
+.addr {
+  margin-top: 5%;
+}
+.addr div {
+  margin-top: 10%;
+}
+
+
