@@ -6,6 +6,9 @@ body {
   margin: 0 auto;
   background-color: whitesmoke;
 }
+.container.mt-5 {
+  width: 50%;
+}
 .contact {
   padding: 5%;
   box-shadow: 0 0 18px rgb(95, 95, 95);
