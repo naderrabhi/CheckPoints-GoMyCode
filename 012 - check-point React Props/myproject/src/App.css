@@ -1,0 +1,28 @@
+body {
+  background-color: gainsboro;
+}
+.card {
+  align-items: center;
+  padding: 2%;
+  border-radius: 30px;
+  box-shadow: 0 0 18px orangered;
+}
+.card h1 {
+  margin-bottom: 3%;
+}
+.card img {
+  margin : 0 auto;
+  margin-bottom: 3%;
+}
+.card p {
+  font-size: 20px;
+}
+span {
+  color: orangered;
+}
+ul {
+  font-size: 24px;
+}
+ul li::marker {
+  color: orangered;
+}
