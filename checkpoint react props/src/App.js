@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="container mt-5" >
         <div className="card" style={{ width: '60%', margin : "0 auto" }}>
-          <FullName />
+          <FullName name="Nader Rabhi" />
           <ImageBio src="/man.png" alt="image-profile"/>
           <Bio name="Nader Rabhi" profession="Web Developer" livePlace="Gafsa, Tunisia" />
           <Profession />
