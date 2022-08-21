@@ -1,5 +1,4 @@
-
-.cardProfile.mt-5.card {
+.cardProfile.mt-3.card {
   width: 18rem;
   margin: 0 auto;
   padding: 2%;
@@ -7,4 +6,15 @@
   border-radius: 30px;
   font-size: 24px;
   font-weight: 500;
+}
+.time {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: orangered;
+  border: 2px solid;
+  box-shadow: 0 0 18px orangered;
+  width: 25%;
+  margin: 0 auto;
+  padding: 2px;
 }

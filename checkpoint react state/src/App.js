@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Time from './Time';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button,Card} from 'react-bootstrap';
@@ -16,7 +17,6 @@ class App extends Component {
         show : true,
         showHidden : "hidden",
     };
-    this.Show = this.Show.bind(this);
   }
 
   Show = () => {
@@ -32,9 +32,10 @@ class App extends Component {
   render() {
     return (
       <div className="container mt-5 text-center">
-        <Button onClick={this.Show} variant="primary">{this.state.showHidden}</Button>
+        <Time />
+        <Button className='mt-2' onClick={this.Show} variant="primary">{this.state.showHidden}</Button>
         <div className='profile' style={{display : "block"}}>
-          <Card className="cardProfile mt-5" >
+          <Card className="cardProfile mt-3" >
             <Card.Img variant="top" src={this.state.Person.imgSrc} />
             <Card.Body>
               <Card.Title><h1>{this.state.Person.fullName}</h1></Card.Title>
