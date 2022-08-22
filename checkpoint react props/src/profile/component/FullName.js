@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class FullName extends Component {
-    render() {
-        return (
-        <h1>Hello My Name Is <span>{this.props.name}</span></h1>
-)}}
+const FullName = (props) => {
+  return (
+    <h1>Hello My Name Is <span>{props.name}</span></h1>
+  )
+}
 
 FullName.defaultProps = {
     name: "Stranger"
