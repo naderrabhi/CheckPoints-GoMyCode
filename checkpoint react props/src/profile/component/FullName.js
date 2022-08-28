@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FullName = (props) => {
+const FullName = ({name,children}) => {
   return (
     <>
-    <h1>Hello My Name Is <span>{props.name}</span></h1>
-    <div>{props.children}</div>
+    <h1>Hello My Name Is <span>{name}</span></h1>
+    <h1>{children}</h1>
     </>
   )
 }

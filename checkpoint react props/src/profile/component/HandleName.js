@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
     
-    const HandleName = ({followMe,name}) => {
+    const HandleName = ({followMe}) => {
       return (
-        <button className="btn btn-primary" onClick={followMe.bind(this,name)}>follow Me!</button>
+        <button className="btn btn-primary" onClick={followMe.bind(this)}>follow Me!</button>
       )
     }
     

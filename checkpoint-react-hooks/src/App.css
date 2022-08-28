@@ -1,1 +1,20 @@
-
+form.form-control {
+    background: rgb(0,15,18);
+  background: linear-gradient(90deg, rgba(0,15,18,1) 7%, rgba(0,25,30,1) 89%);
+  color: white;
+  padding: 5%;
+  border: none;
+  text-align: center;
+}
+.d-flex {
+  display: flex!important;
+  margin-top: -5%;
+}
+button.btn.btn-primary {
+  width: 10%;
+  margin-left: 5%;
+}
+button.btn.btn-primary.btn-lg {
+  width: 20%;
+  margin: 3% auto;
+}

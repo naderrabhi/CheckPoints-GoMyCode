@@ -1,22 +1,11 @@
 import React from 'react';
-import animelists from '../animelists/Animelist';
+import Card from '../Card/Card';
 import './moviecard.css'
 
-function MovieCard(){
+function MovieCard({MovieLists}){
     
-    return (animelists.map((animelist,index) =>
-        <div className="col-md-4 mt-3" key={index}>
-        <a href={animelist.posterURL}>
-        <div className="card" >
-            <div className="card-header"><img src={animelist.img} alt="" /></div>
-            <div className="card-body descriptions">
-                <h5>{animelist.title}</h5>
-                <p>{animelist.description}</p>
-                
-            </div>
-        </div>
-        </a>
-        </div> 
+    return (MovieLists.map( (el,index) => <Card el={el} key={index} />
+         
     ))
 }
 
