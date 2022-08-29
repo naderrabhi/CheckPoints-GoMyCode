@@ -1,8 +1,8 @@
 import React from 'react';
-import FullName from '../src/profile/component/FullName';
-import Profession from '../src/profile/component/Profession';
-import Bio from '../src/profile/component/Bio';
-import HandleName from '../src/profile/component/HandleName';
+import FullName from './profile/component/FullName';
+import Profession from './profile/component/Profession';
+import Bio from './profile/component/Bio';
+import HandleName from './profile/component/HandleName';
 import './App.css';
 
 const App = () => {

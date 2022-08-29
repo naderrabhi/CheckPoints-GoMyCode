@@ -1,5 +1,5 @@
 import React from 'react';
-import Items from '../component/Items'
+import Items from './Items'
 
 const Profession = () => {
   return (
