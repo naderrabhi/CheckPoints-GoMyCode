@@ -6,15 +6,3 @@ form.form-control {
   border: none;
   text-align: center;
 }
-.d-flex {
-  display: flex!important;
-  margin-top: -5%;
-}
-button.btn.btn-primary {
-  width: 10%;
-  margin-left: 5%;
-}
-button.btn.btn-primary.btn-lg {
-  width: 20%;
-  margin: 3% auto;
-}

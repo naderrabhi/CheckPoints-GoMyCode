@@ -1,85 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ListMovies from "./ListMovies";
+import MovieList from "./component/movieList/MovieList";
+import Filter from "./component/filter/Filter";
+import AddMovie from "./component/addingMovie/AddMovie";
+import EditMovie from "./component/editMovie/EditMovie";
 
-import Header from './component/header/Header';
-import MovieLists from './MovieLists';
-import MovieCard from './component/movieCard/MovieCard';
-import MovieAdd from './component/movieAdd/MovieAdd';
-import Search from './component/movieFilter/Search';
-import SearchByRating from './component/SearchRating/SearchByRating'
+const App = () => {
+  const [newListMovies, setList] = useState(ListMovies);
+  const [listFiltred, setListFiltred] = useState(newListMovies);
+  const [editM, setEditM] = useState("");
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
-function App() {
-  
-  const [newMovieLists,setMovieLists] = useState(MovieLists)
-  const [searchArr,setSearchArr] = useState("")
-  const [searchRate,setSearchRate] = useState("")
-
-  {/*Adding new movie  */}
-
-const addMovie = (movie) => {
-  if (movie.title && movie.description && movie.posterURL && movie.rating && movie.img){
-  setMovieLists ([...newMovieLists, movie])
-  }
-}
-{/*Search movie by rating */}
-
-const handleSearchRate = x => {
-  setSearchRate ( newMovieLists.filter(movie => movie.rating >= x ).map((el,i) =>
-    <div className="col-md-4 mt-3" key={i}>
-        <a href={el.posterURL }>
-        <div className="card" >
-            <div className="card-header"><img src={el.img} alt="" /></div>
-            <div className="card-body descriptions">
-                <h5>{el.title}</h5>
-                <p>{el.description}</p>
-                <span>{`${el.rating} /10`}</span>
-            </div>
-        </div>
-        </a>
-  </div>) )
-  }
-  {/*Search movie by title */}
-const callSearchFunction = x => {
-  setSearchArr ( newMovieLists.filter(movie => movie.title.toLowerCase() === x.toLowerCase() ).map((el,i) =>
-    <div className="col-md-4 mt-3" key={i}>
-        <a href={el.posterURL }>
-        <div className="card" >
-            <div className="card-header"><img src={el.img} alt="" /></div>
-            <div className="card-body descriptions">
-                <h5>{el.title}</h5>
-                <p>{el.description}</p>
-                <span>{`${el.rating} /10`}</span>
-            </div>
-        </div>
-        </a>
-  </div>) )
+  function adding(movie) {
+    setListFiltred([...listFiltred, movie]);
   }
 
+  function filter(tVal, rate) {
+    setListFiltred(
+      newListMovies.filter((movie) => {
+        return (
+          movie.title.toLowerCase().includes(tVal.toLowerCase()) &&
+          movie.rating >= rate
+        );
+      })
+    );
+  }
+  const delMovie = (x) => {
+    setListFiltred(listFiltred.filter((el) => el.id !== x));
+  };
+  const editMovie = (x) => setEditM(x);
+
+  const saveEdit = (x) => {
+    setListFiltred(listFiltred.map((el) => (el.id === x.id ? x : el)));
+    console.log(x);
+  };
   return (
     <div>
-
-      <Header>
-        <MovieAdd addMovie={addMovie} />
-        <Search callSearchFunction={callSearchFunction} />
-        <SearchByRating handleSearchRate={handleSearchRate} />
-      </Header>
-
-      <div className="container mt-5">
-        <div className="row mt-3 mr-5">
-          {searchArr}
-          <hr />
-          {searchRate}
-          <hr />
-        </div>
-        <div className="row">
-          <MovieCard MovieLists={newMovieLists} />
+      <div className="container">
+        <Filter filter={filter} />
+        <AddMovie adding={adding} />
+        <EditMovie editM={editM} saveEdit={saveEdit} />
+        <div className="row mt-5">
+          <MovieList
+            list={listFiltred}
+            delMovie={delMovie}
+            editMovie={editMovie}
+          ></MovieList>
         </div>
       </div>
-
     </div>
   );
-}
+};
 
 export default App;
