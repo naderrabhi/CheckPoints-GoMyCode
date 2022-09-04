@@ -30,6 +30,7 @@ const AddMovie = ({ adding }) => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
+                handleClose()
               }}
             >
               <input
@@ -66,7 +67,10 @@ const AddMovie = ({ adding }) => {
                 placeholder="movie image"
                 className="form-control"
               />
-              <Button onClick={() => adding(movie)} variant="success">
+              <Button onClick={() => {
+                adding(movie);
+                handleClose();
+              }} variant="success">
                 add new movie
               </Button>
             </form>

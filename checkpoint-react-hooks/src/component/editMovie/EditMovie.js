@@ -17,14 +17,14 @@ const EditMovie = ({ editM, saveEdit }) => {
 
   const submitEdit = (event) => {
     event.preventDefault();
-    setEditM({
-      id: editM.id,
+    setEditM([{
+      id:editM.id,
       title: editT,
       description: editD,
       posterURL: editP,
       rating: editR,
       img: editI,
-    });
+    }]);
   };
 
   return (

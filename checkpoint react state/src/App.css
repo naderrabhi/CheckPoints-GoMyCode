@@ -18,3 +18,6 @@
   margin: 0 auto;
   padding: 2px;
 }
+button.mt-2.btn.btn-primary {
+  margin: 1%;
+}

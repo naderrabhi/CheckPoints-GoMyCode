@@ -4,9 +4,10 @@ import MovieCard from "../movieCard/MovieCard";
 function MovieList({ list, delMovie, editMovie, children }) {
   return list.map((movie) => (
     <MovieCard
+      key={movie.id}
       movie={movie}
       delMovie={delMovie}
-      editMovie={editMovie}
+      // editMovie={editMovie}
       children={children}
     />
   ));

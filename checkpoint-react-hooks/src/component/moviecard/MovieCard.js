@@ -6,7 +6,6 @@ import "./moviecard.css";
 const MovieCard = ({ movie, delMovie, editMovie, children }) => {
   return (
     <div
-      key={movie.id}
       className="col-md-4 text-center mb-5 text-muted text-light"
     >
       <Card className="card-movie" style={{}}>
@@ -21,9 +20,9 @@ const MovieCard = ({ movie, delMovie, editMovie, children }) => {
           <Card.Text>{movie.description}</Card.Text>
           <Card.Text>{movie.posteURL}</Card.Text>
           <Card.Text>{movie.rating}</Card.Text>
-          <Button variant="primary" onClick={() => editMovie(movie)}>
+          {/* <Button variant="primary" onClick={() => editMovie(movie)}>
             Edit
-          </Button>
+          </Button> */}
           <Button
             className="btn-del"
             variant="danger"
