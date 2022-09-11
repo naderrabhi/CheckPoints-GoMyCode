@@ -1,0 +1,18 @@
+.card--movie--description {
+    margin: 10% auto ;
+    width: 75%;
+    padding: 2%;
+    box-shadow: 0 0 18px #0d1c2e;
+    font-family: cursive;
+    font-size: 24px;
+    background-color: #0d1c2e;
+    color: white;
+}
+
+.card--movie--description div {
+    margin-bottom: 2%;
+}
+
+.col-3 img {
+    max-width: 100%;
+}

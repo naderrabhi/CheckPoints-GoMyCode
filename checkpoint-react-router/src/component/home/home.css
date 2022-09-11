@@ -1,0 +1,39 @@
+.movies--home {
+    background: #0d1c2e ;
+    padding: 10% 0 15% 0;
+    font-family: cursive;
+}
+
+.movies--home h1 {
+    color: #e4d804;
+    line-height: 150px;
+    font-size: 75px;
+    margin-left: 37px;
+}
+
+.movies--home h2 {
+    color: white;
+    font-size: 60px;
+    margin-left: 37px;
+}
+
+.movies--home span {
+    color: #e4d804;
+}
+
+.movies--home .btn {
+    color: white;
+    background: #243548;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: solid 1px #e4d804;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 3%;
+}
+
+.movies--home .btn:hover {
+    background:#e4d804 ;
+    color: #243548;
+}

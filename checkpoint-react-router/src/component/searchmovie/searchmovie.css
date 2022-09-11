@@ -1,0 +1,17 @@
+.movie--filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.movie--filter .form-control {
+    height: 28px;
+    width: 200px;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.movie--filter .star-ratings {
+    margin-bottom: 11px;
+}

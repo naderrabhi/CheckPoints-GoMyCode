@@ -1,0 +1,25 @@
+.movie--card {
+    width: 20%;
+    margin-top: 2%;
+    font-family: cursive;
+}
+
+.card--img {
+    position: relative;
+}
+
+.card--img img {
+    max-width: 100%; 
+}
+.movie--card:hover {
+    box-shadow: 0px 0px 18px #e4d804;
+    transform: scale(1.025);
+    transition:0.5s;
+}
+
+.star--ratings {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+    margin: -57px 34px;
+}

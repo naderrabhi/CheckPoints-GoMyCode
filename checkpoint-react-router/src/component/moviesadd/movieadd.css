@@ -1,0 +1,14 @@
+.movie--form {
+    width: 50%;
+    display: block;
+    margin: 10% auto;
+    font-family: cursive;
+    padding: 2%;
+    background-color: #0d1c2e;
+    border-radius: 30px;
+}
+.movie--form h1 {
+    color: white;
+    margin-bottom: 5%;
+    text-align: center;
+}
