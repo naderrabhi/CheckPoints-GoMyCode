@@ -18,7 +18,7 @@ const App = () => {
   const [indexMovie, setIndexmovie] = useState(0);
 
   const addMovie = (movie) => {
-    setMoviesList([{ ...movie, id: movieList.length }, ...movieList]);
+    setMoviesList([...movieList,{ ...movie, id: movieList.length }]);
   };
 
   const filterByTitle = (serchedtitle) => {

@@ -1,11 +1,11 @@
 import React from 'react'
 import './header.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = ({title,children}) => {
   return (
     <div className='movies--header fixed-top'>
-        <h4>{title}</h4>
+        <div className='movie--logo'><Link to='/'><h4>{title}</h4></Link></div>
         <nav className='movies--nav' >
             <ul>
                 <li><NavLink to="/">Home</NavLink></li>

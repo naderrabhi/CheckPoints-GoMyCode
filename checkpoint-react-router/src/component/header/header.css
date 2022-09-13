@@ -25,4 +25,14 @@
     color: white;
     font-weight: 700;
     cursor:pointer;
+    
+}
+
+.movie--logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.movies--nav ul li .active{
+    color: #e4d804;
 }
