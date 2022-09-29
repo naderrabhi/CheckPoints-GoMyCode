@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./cardm.css";
-import StarRatings from "react-star-ratings";
+
 import { Button, Modal } from "react-bootstrap";
 
 const CardM = ({ movie }) => {

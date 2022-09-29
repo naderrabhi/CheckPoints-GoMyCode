@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
+// import axios from "axios";
 
 const AddUser = ({ handleAdd }) => {
   const [show, setShow] = useState(false);
@@ -10,6 +11,11 @@ const AddUser = ({ handleAdd }) => {
   const handleShow = () => setShow(true);
 
   const handleSave = () => {
+
+    // axios.post(`https://jsonplaceholder.typicode.com/users`, { newUser })
+    //   .then(response => {
+    //     console.log(response.data);
+    //   })
     handleAdd(newUser);
     setNewUser({});
     handleClose();

@@ -16,11 +16,10 @@ const Header = () => {
       <ul style={{ display: "flex", justifyContent: "center" }}>
         <Link
           style={{
-            marginTop: 25,
             textDecoration: "none",
             fontWeight: "bold",
             fontSize: 60,
-            marginTop: "-10px",
+            marginTop: -10,
             color: "white",
           }}
           to="/"
